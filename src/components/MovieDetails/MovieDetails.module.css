@@ -1,0 +1,51 @@
+.moviesBtn {
+  background-color: #003cb3;
+  border: none;
+  height: 50px;
+  width: 100px;
+  border-radius: 45px;
+  margin-top: 20px;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.detailsImgBox {
+  display: flex;
+}
+.detailsImg {
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.detailsBox {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.genresList {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.addInfo {
+  margin-left: 30px;
+}
+
+.addInfoTitle {
+  margin-left: 40px;
+}
+
+.addInfoList {
+  list-style: none;
+}
+
+.addInfoLink {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,8 @@
+.castBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.castList {
+  list-style: none;
+}

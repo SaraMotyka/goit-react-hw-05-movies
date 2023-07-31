@@ -1,0 +1,7 @@
+.reviewsBox {
+  display: flex;
+}
+
+.reviewsList {
+  list-style: none;
+}

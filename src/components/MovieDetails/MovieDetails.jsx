@@ -3,7 +3,6 @@ import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { fetchMovieDetails } from 'Helpers/ApiData';
 import { Loader } from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
-import { Navigation } from 'components/Navigation/Navigation';
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
@@ -46,7 +45,7 @@ export const MovieDetails = () => {
 
   return (
     <div>
-      <Navigation />
+      {/* <Navigation /> */}
       <Link to="/" state={{ from: location }}>
         <button type="button" className={css.moviesBtn}>
           Go back

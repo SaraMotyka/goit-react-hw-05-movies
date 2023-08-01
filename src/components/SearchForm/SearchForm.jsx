@@ -15,15 +15,18 @@ const SearchForm = ({ searchMovies }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={css.formBox} onSubmit={handleSubmit}>
       <input
+        className={css.inputForm}
         type="text"
         name="query"
         autoFocus
         value={query}
         onChange={handleInputChange}
       />
-      <button type="submit">Search</button>
+      <button className={css.formBtn} type="submit">
+        Search
+      </button>
     </form>
   );
 };

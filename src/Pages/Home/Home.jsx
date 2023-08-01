@@ -2,11 +2,10 @@ import { React, useEffect, useState } from 'react';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { fetchTrending } from 'Helpers/ApiData';
 import { Loader } from 'components/Loader/Loader';
-import { Navigation } from 'components/Navigation/Navigation';
 import css from './Home.module.css';
 
 export const Home = () => {
-  const [movies, setMovies] = useState([]);
+  const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -15,7 +14,7 @@ export const Home = () => {
 
       fetchTrending()
         .then(trendingFilms => {
-          setMovies(trendingFilms);
+          setFilms(trendingFilms);
         })
         .catch(error => {
           console.log(error);
@@ -30,10 +29,10 @@ export const Home = () => {
 
   return (
     <div>
-      <Navigation />
       <h1 className={css.pageTittle}>Trending today</h1>
-      <MoviesList movies={movies} />
+      <MoviesList films={films} />
       {loading && <Loader />}
     </div>
   );
 };
+export default Home;

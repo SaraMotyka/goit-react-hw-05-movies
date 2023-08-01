@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Loader from 'components/Loader/Loader';
 import MoviesList from 'components/MoviesList/MoviesList';
-import { Navigation } from 'components/Navigation/Navigation';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { fetchSearchByKeyword } from 'Helpers/ApiData';
 
@@ -28,7 +27,6 @@ export const Movies = () => {
 
   return (
     <div>
-      <Navigation />
       <SearchForm searchMovies={searchMovies} />
       {loading && <Loader />}
       {noMoviesText && (

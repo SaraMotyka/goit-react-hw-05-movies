@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { fetchReviews } from 'Helpers/ApiData';
 import Loader from 'components/Loader/Loader';
 import css from './Reviews.module.css';
-import { Navigation } from 'components/Navigation/Navigation';
 
 export const Reviews = () => {
   const { movieId } = useParams();
@@ -50,3 +49,4 @@ export const Reviews = () => {
     </div>
   );
 };
+export default Reviews;

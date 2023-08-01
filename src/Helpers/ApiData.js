@@ -14,11 +14,20 @@ export const fetchSearchByKeyword = async keyword => {
   return response.data.results;
 };
 
+// export const fetchMovieDetails = async movieId => {
+//   const response = await axios.get(
+//     `movie/${movieId}?api_key=${API_KEY}&language=en-US`
+//   );
+//   return response.data;
+// };
 export const fetchMovieDetails = async movieId => {
-  const response = await axios.get(
-    `movie/${movieId}?api_key=${API_KEY}&language=en-US`
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
   );
-  return response.data;
+  if (!response.ok) {
+    throw new Error('Movie details not found');
+  }
+  return await response.json();
 };
 
 export const fetchActors = async movieId => {
